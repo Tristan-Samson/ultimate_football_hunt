@@ -119,16 +119,68 @@ We found pour key, and the link to a new [facebook profile](https://www.facebook
 
 ### Destination finale
 
-La suite arrive demain.
+On franck's profile was a photo showing the view of a city from the sky. Franck mentionned a review he did on a "greenery".
+First of all, we had to find the city on the photo. The wing of the plane told us the company which was TAP air portugal.
+We checked on flight radar an foud that there was only 2 destinations with this company from Paris : Porto and Lisbon.
+We focused on Lisbon because the water in the background was matching with google maps.
+Our search time was pretty long but we found an area matching with the street patterns at some point.
+We then checked for google reviews of the local greeneries, matching the date, from people called franck and in french language.
+We found one, giving us access to Franck's [google profile](https://www.google.com/maps/contrib/108690436304588953670/reviews/@38.7374112,-18.1195569,5z/data=!4m3!8m2!3m1!1e1?hl=fr).
+The flag was on his profile photo.
+We just had to change the URL of the link of the photo to get the full size original photo and be able to read the flag.
 
 ### Geoguessing 1
 
+Back to Franck's facebook profile, he gave us a link to a [google drive](https://photos.app.goo.gl/XWRWhx2GYqbXh3qa8) in his own photo comment.
+On this photo, we can see a tiny 42 logo on the sign in the first plan.
+We looked at every 42 campus until we found 42 Prague's campus.
+It was our first Geoguessing key.
+
 ### Geoguessing 2
+
+For the second key, another photo was given.
+It was pretty straight forward, the name of the building was written on it in big golden letters.
 
 ### Geoguessing 3
 
+Another geoguessing, another photo.
+An SK Slavia PRaha logo can be seen. Searching it on google maps and it points to an area near a staduim.
+Our point is in the streets surounding the staduim.
+
 ### Geoguessing 4
+
+Last geoguessing key, we have to find the name of the staduim. Just clickrd on the point on gmap and we got it.
 
 ### La chance du débutant
 
+For this challenge, we had an [Instagram profile](https://www.instagram.com/girouscopee/).
+In a photo, Girouscopee is mentioning APT42 collector stickers we can find and buy on the internet.
+We found them [on vinted](https://www.vinted.fr/member/120522419-dingocrypto).
+The seller seems to be the crypto enthusiastic Messi talked about on his linkedin.
+Let's check his [twitter profile](https://twitter.com/crypt0dingo) linked on his vinted.
+The flag is in his twitter bio.
+
 ### FC NTF
+
+Last flag to find.
+We checked the profile of our cryptobro and found [a tweet](https://twitter.com/crypt0dingo/status/1595064168159547392?s=20&t=UHASTsvhplhIeLXJT9RMcA) linking a smartcontract on the eth blockchain and the code of this smartcontract.
+We went to the smart contract address on ethscan and checked for more details.
+In the details we got some input datas. We extracted them in the UTF8 format.
+The data seems kind of corrupted, but as there are some understandable sentences, we might get something interesting.
+We're liikong for parts that seems "less corupted" and in the end of the string, there are a long part that doesn't contain corrupted datas.
+Moreover, these 3 last lines looks like hexadecimal datas.
+Let's convert it into UTF8 again. We got the first part of our key for the first lines ! But the 2 other lines can't be converted.
+Looking more closely at the 2 other lines, there seems to be 2 words and an uppercase before we get an actual hexa address.
+Let's try to convert them now. It can be converted but it was not a part of a key.
+But it looked like base 64 datas. Let's convert it again from base 64 to UTF8.
+It worked again, we have our 2 last parts ! But something is off with the last part, it means nothing.
+It looks like caesar code, and a rotation function does confirm that, we got our last part and the last key of this CTF is complete !
+
+## Conclusion
+
+On a personal note it was an awesome first experience.
+We came at the CTF as beginners, aiming to resolve a maximum of half of the challenges and in the end we were the first and only group to solve it on time.
+Even if we did 4th place in the end due to the points count I am pretty proud of our performance.
+
+Thanks again to my team members : jgreau, tlebouvi, cclaude and vchan for the day, we really found ourselves and completed each other competences.
+A last thank to APT42 for the organisation of this CTF, which was very fun.
